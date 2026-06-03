@@ -57,14 +57,48 @@ header {
   cursor: pointer;
 }
 
-.tabs {
+.main-tabs {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   padding-bottom: 12px;
   border-bottom: 1px solid #f0f0f0;
 }
 
-.tab {
+.main-tab {
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+  padding-bottom: 8px;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.main-tab:hover {
+  color: #ff4757;
+}
+
+.main-tab.active {
+  color: #333;
+  font-weight: 500;
+}
+
+.main-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #333;
+}
+
+.sub-tabs {
+  display: flex;
+  gap: 24px;
+  margin-top: 12px;
+}
+
+.sub-tab {
   font-size: 16px;
   font-weight: 500;
   color: #999;
@@ -74,15 +108,15 @@ header {
   transition: color 0.2s;
 }
 
-.tab:hover {
+.sub-tab:hover {
   color: #ff4757;
 }
 
-.tab.active {
+.sub-tab.active {
   color: #ff4757;
 }
 
-.tab.active::after {
+.sub-tab.active::after {
   content: '';
   position: absolute;
   bottom: -1px;
@@ -90,33 +124,6 @@ header {
   right: 0;
   height: 2px;
   background: #ff4757;
-}
-
-.sub-tabs {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 12px;
-}
-
-.sub-tab {
-  font-size: 13px;
-  color: #666;
-  padding: 4px 12px;
-  background: #f5f5f5;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.sub-tab:hover {
-  background: #ffeef0;
-  color: #ff4757;
-}
-
-.sub-tab.active {
-  background: #ff4757;
-  color: white;
 }
 
 .content {
@@ -325,11 +332,11 @@ header {
     grid-template-columns: 1fr;
   }
   
-  .tabs {
+  .sub-tabs {
     gap: 16px;
   }
   
-  .tab {
+  .sub-tab {
     font-size: 14px;
   }
 }
