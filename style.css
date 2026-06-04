@@ -313,6 +313,141 @@ header {
   }
 }
 
+.city-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.city-tabs.hidden {
+  display: none;
+}
+
+.city-tab {
+  font-size: 14px;
+  color: #666;
+  padding: 6px 16px;
+  background: #f5f5f5;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.city-tab:hover {
+  background: #ffeef0;
+  color: #ff4757;
+}
+
+.city-tab.active {
+  background: #ff4757;
+  color: white;
+}
+
+.city-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.city-notes.hidden {
+  display: none;
+}
+
+.city-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  gap: 12px;
+}
+
+.city-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff6b9d, #ff8f66);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.city-content {
+  flex: 1;
+}
+
+.city-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.city-author {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.city-time {
+  font-size: 12px;
+  color: #999;
+}
+
+.city-text {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.city-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.city-tag {
+  font-size: 12px;
+  padding: 3px 10px;
+  background: #f5f5f5;
+  color: #666;
+  border-radius: 4px;
+}
+
+.city-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.city-action {
+  font-size: 13px;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.city-action:hover {
+  color: #ff4757;
+}
+
+#city-section {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 900px) {
+  .notes-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 600px) {
   .notes-section {
     grid-template-columns: 1fr;
@@ -324,5 +459,9 @@ header {
   
   .sub-tab {
     font-size: 14px;
+  }
+  
+  .city-card {
+    flex-direction: column;
   }
 }
